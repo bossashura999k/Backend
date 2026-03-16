@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-	"dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   "dependencies": {
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "mongoose": "^9.3.0"
+    "mongoose": "^9.3.0",
+    "router": "^2.2.0"
   },
   "homepage": "https://github.com/bossashura999k/Backend#readme"
 }
