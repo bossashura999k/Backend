@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-
+import bcrypt from "bcrypt";
 const userSchema = new Schema(
     {
         username: {
@@ -17,7 +17,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
             minLength: 5,
-            maxLength: 15,
+            maxLength: 100,
 
         },
 
@@ -33,5 +33,11 @@ const userSchema = new Schema(
 
     {}
 )   
+
+// Password Hashing
+
+userSchema.methods.comparePassword = async function(password) {
+    return await bcrypt.compare(password, this.password);
+};
 
 export const User = mongoose.model("User", userSchema)
