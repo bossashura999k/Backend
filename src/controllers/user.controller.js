@@ -12,7 +12,7 @@ const registerUser = async (req, res) => {
 
         const existing = await User.findOne({ email: email.toLowerCase() })
         if (existing) {
-            return res.status(400).json({ messasge: "User Already Exists"})
+            return res.status(400).json({ message: "User Already Exists"})
         }
 
         const saltRounds = 10;
