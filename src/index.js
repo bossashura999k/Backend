@@ -17,7 +17,7 @@ const startServer = async () => {
             console.log(`Server started, PORT: ${process.env.PORT}`);
         });
     } catch (error) {
-        console.log("Connection Failed!!!, \n Error: ", err)
+        console.log("Connection Failed!!!, \n Error: ", error)
     }
 }
 

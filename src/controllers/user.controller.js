@@ -7,7 +7,7 @@ const registerUser = async (req, res) => {
 
         // Validation
         if (!username || !email || !password) {
-            return res.status(400).json({ messasge: "Fill in all fields! "})
+            return res.status(400).json({ message: "Fill in all fields! "})
         }
 
         const existing = await User.findOne({ email: email.toLowerCase() })
